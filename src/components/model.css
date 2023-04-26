@@ -1,0 +1,46 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  background-color: #00000050;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.model_content {
+  background-color: white;
+  height: auto;
+  position: absolute;
+  width: auto;
+  min-width: 250px;
+  max-width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.close_model {
+  background-color: black;
+  border: 2px solid white;
+  width: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
