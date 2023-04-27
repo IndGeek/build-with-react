@@ -5,7 +5,7 @@ body {
 }
 
 .overlay {
-  background-color: #00000050;
+  background-color: #00000080;
   height: 100vh;
   width: 100vw;
   top: 0;
@@ -28,6 +28,7 @@ body {
   padding: 18px 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
 }
 .close_model {
   background-color: black;

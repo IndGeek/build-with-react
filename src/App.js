@@ -1,9 +1,11 @@
 import "./styles.css";
 import Model from "./components/Model";
+import Slider from './components/Slider';
 
 export default function App() {
   return (
     <div className="App">
+      <Slider/>
       <Model popTitle="Register">
         <h1>Hi, apply here</h1>
         <h4>Start filling the form!</h4>

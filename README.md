@@ -27,3 +27,7 @@ export default function App() {
   );
 }
 ```
+
+### Carousel
+### Active selection in ReactJS
+### Switchable Tabs
