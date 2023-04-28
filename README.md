@@ -1,3 +1,13 @@
+# Contents
+
+1. Popup
+2. Slider
+3. Carousel
+4. Pagination
+5. Loader
+6. Read more
+
+
 ## Showing video popup
 ![Demo](./assets/popup-model.png)
 
