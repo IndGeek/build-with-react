@@ -6,6 +6,8 @@
 4. Pagination
 5. Loader
 6. Read more
+7. Draggable in React
+8. Number increase animation
 
 
 ## Showing video popup
