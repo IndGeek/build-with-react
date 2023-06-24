@@ -7,7 +7,7 @@ const Slider = () => {
             <div className="slider">
                 <div className="slides">
                     <div id="slide-1"><img src="https://soumyamondal.com/soumya2.jpg" alt="first"/></div>
-                    <div id="slide-2"><img src="https://images.pexels.com/photos/14966037/pexels-photo-14966037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="first"/></div>
+                    <div id="slide-2"><img src="https://picsum.photos/400/400" alt="first"/></div>
                     <div id="slide-3">3</div>
                     <div id="slide-4">4</div>
                     <div id="slide-5">5</div>

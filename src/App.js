@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Model from "./pages/model";
+import Modal from "./pages/Modal";
 import Slider from './pages/slider';
 import Carousel from './pages/carousel';
 import Home from './pages/home';
@@ -10,7 +10,7 @@ export default function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/model" element={<Model />} />
+          <Route path="/Modal" element={<Modal />} />
           <Route path="/slider" element={<Slider />} />
           <Route path="/carousel" element={<Carousel />} />
           <Route path="/" element={<Home />} />

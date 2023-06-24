@@ -1,20 +1,20 @@
 import { useState } from "react";
-import "./model.css";
+import "./Modal.css";
 
-const Model = ({ children, popTitle }) => {
+const Modal = ({ children, popTitle }) => {
   const [toggle, setToggle] = useState(false);
-  const toggleModel = () => {
+  const toggleModal = () => {
     setToggle(!toggle);
   };
   return (
     <>
-      <button className="btn pointer" onClick={toggleModel}>{popTitle}</button>
+      <button className="btn pointer" onClick={toggleModal}>{popTitle}</button>
       {toggle ? (
         <div>
-          <div onClick={toggleModel} className="overlay"></div>
-          <div className="model_content">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="Modal_content">
             {children}
-            <button onClick={toggleModel} className="close_model">
+            <button onClick={toggleModal} className="close_Modal">
               X
             </button>
           </div>
@@ -23,4 +23,4 @@ const Model = ({ children, popTitle }) => {
     </>
   );
 };
-export default Model;
+export default Modal;

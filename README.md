@@ -16,7 +16,7 @@
 ```js
 import {useState, useEffect} from 'react'
 import "./styles.css";
-import Model from "./components/Model";
+import Modal from "./components/Modal";
 
 export default function App() {
   const [sizing, setSizing] = useState({
@@ -32,9 +32,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <Model popTitle="Watch Video">
+      <Modal popTitle="Watch Video">
         <iframe width={sizing.w} height={sizing.h} style={{ maxWidth: sizing.w }} src="https://www.youtube.com/embed/k2NaUpW4Xdc" title="Create Tabs with React !" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </Model>
+      </Modal>
     </div>
   );
 }

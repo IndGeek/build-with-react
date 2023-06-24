@@ -15,7 +15,7 @@ body {
   position: fixed;
 }
 
-.model_content {
+.Modal_content {
   background-color: white;
   height: auto;
   position: absolute;
@@ -30,7 +30,7 @@ body {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   z-index: 99999;
 }
-.close_model {
+.close_Modal {
   background-color: black;
   border: 2px solid white;
   width: auto;
