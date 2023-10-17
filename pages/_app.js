@@ -8,6 +8,12 @@ import '../public/nprogress.css';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Script from 'next/script';
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600']
+})
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +54,9 @@ export default function App({ Component, pageProps }) {
                     });
                 `}
     </Script>
-    <Component {...pageProps} />
+    <main className={poppins.className} >
+      <Component {...pageProps} />
+    </main>
     <ToastContainer />
     {isLoading && <div className="nprogress-custom-parent"><div className="nprogress-custom-bar"/></div>}
     <Footer/>
