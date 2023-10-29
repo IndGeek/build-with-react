@@ -73,11 +73,18 @@ const Search = () => {
         return ()=> window.removeEventListener('click', ()=>{})
     }, [])
 
+    const highlightMatch = (suggestion, searchTerm) => {
+        const regex = new RegExp(`(${searchTerm})`, 'i');
+        const parts = suggestion.split(regex);
+        return parts.map((part, index) =>
+            regex.test(part) ? <span key={index} className="font-bold">{part}</span> : part
+        );
+    };
     return (
         <>
         <main className='flex justify-center items-center h-screen flex-col'>
         <input type="text" 
-            placeholder="Search here" id="auto_search" 
+            placeholder="Search here" id="auto_search_suggestion" 
             value={searchTerm} ref={inputRef}
             className='border-2 border-black px-10 py-2 w-[350px]'
             onFocus={() => setSearchAreaVisibility(true)}
@@ -91,7 +98,8 @@ const Search = () => {
                 return <div className='border-b py-1 px-2 m-1' ref={suggestionBoxRef}
                             onClick={()=>setSearchTerm(response)}
                         >
-                            {response}
+                            {highlightMatch(response, searchTerm)} 
+                            {/* first write response */}
                         </div>
             })}
             
