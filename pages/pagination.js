@@ -3,7 +3,7 @@ import Pagination from "../components/Pagination";
 
 const Index = () => {
     const [posts, setPosts] = useState();
-    const [currentPage, setCurrentPage] = useState(2);
+    const [currentPage, setCurrentPage] = useState(1);
     const perPage = 8;
     const totalPages = Math.ceil(posts?.length / perPage);
     const startIndex = (currentPage - 1) * perPage;
@@ -19,6 +19,7 @@ const Index = () => {
     return (
         <>
         <main className="flex flex-col justify-center items-center h-screen text-left">
+        <h5 className="font-bold text-center pb-10">Current Page No: <span className="text-indigo-500">{currentPage.toString().padStart(2, 0)}</span></h5>
             {visibleItems?.map((post) => {
                 return <div><strong>{post.id}.</strong> {post.title}</div>;
             })}
