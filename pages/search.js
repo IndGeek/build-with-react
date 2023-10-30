@@ -15,7 +15,6 @@ const Search = () => {
         'Ford Mustang',
         'Ford F-150',
         'Ford Focus',
-        'Ford Explorer',
         'Ford Escape',
         'Ford Fusion',
         'Toyota Camry',
@@ -25,14 +24,9 @@ const Search = () => {
         'Toyota Tacoma',
         'Honda Civic',
         'Honda Accord',
-        'Honda CR-V',
-        'Honda Fit',
-        'Honda Pilot',
-        'Chevrolet Silverado',
         'Chevrolet Malibu',
-        'Chevrolet Equinox',
         'Chevrolet Camaro',
-        'Chevrolet Impala',
+        'Chevrolet Corvette',
         'BMW 3 Series',
         'BMW 5 Series',
         'BMW X3',
@@ -48,9 +42,8 @@ const Search = () => {
         'Audi Q5',
         'Audi Q7',
         'Audi TT',
-        'Hyundai Sonata',
+        'Audi R8',
         'Hyundai Tucson',
-        'Hyundai Santa Fe',
     ];
 
     const handleSearch = (e) =>{ // 3
@@ -83,27 +76,29 @@ const Search = () => {
     return (
         <>
         <main className='flex justify-center items-center h-screen flex-col'>
-        <input type="text" 
-            placeholder="Search here" id="auto_search_suggestion" 
-            value={searchTerm} ref={inputRef}
-            className='border-2 border-black px-10 py-2 w-[350px]'
-            onFocus={() => setSearchAreaVisibility(true)}
-            onChange={handleSearch}
-            autoFocus={true}
-            spellCheck={false}
-            />
-        
-        {searchAreaVisible && <div className='p-2 border-2 border-t-0 border-black w-[350px]' id="suggestion-box">
-            {responses.map((response) =>{
-                return <div className='border-b py-1 px-2 m-1' ref={suggestionBoxRef}
-                            onClick={()=>setSearchTerm(response)}
-                        >
-                            {highlightMatch(response, searchTerm)} 
-                            {/* first write response */}
-                        </div>
-            })}
+        <div className='search-box fixed top-[300px]'>
+            <input type="text" 
+                placeholder="Search here" id="auto_search_suggestion" 
+                value={searchTerm} ref={inputRef}
+                className='border-2 border-black px-5 py-2 w-[350px]'
+                onFocus={() => setSearchAreaVisibility(true)}
+                onChange={handleSearch}
+                autoFocus={true}
+                spellCheck={false}
+                />
             
-            </div>}
+            {(searchAreaVisible && searchTerm) && <div className='p-2 border-2 border-t-0 border-black w-[350px]' id="suggestion-box">
+                {responses.map((response) =>{
+                    return <div className='border-b py-1 px-2 m-1' ref={suggestionBoxRef}
+                                onClick={()=>setSearchTerm(response)}
+                            >
+                                {highlightMatch(response, searchTerm)} 
+                                {/* first write response */}
+                            </div>
+                })}
+                
+                </div>}
+            </div>
         </main>
         </>
     )
