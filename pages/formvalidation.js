@@ -61,7 +61,7 @@ const FormComponent = () => {
             name="username"
             value={values.username}
             onChange={handleChange}
-            className="focus:outline-none pl-2 text-gray-800"
+            className="focus:outline-none pl-2 text-gray-800 w-full"
             spellCheck={false}
             />
         </label>
@@ -75,7 +75,7 @@ const FormComponent = () => {
             name="email"
             value={values.email}
             onChange={handleChange}
-            className="focus:outline-none pl-2 text-gray-800"
+            className="focus:outline-none pl-2 text-gray-800 w-full"
             spellCheck={false}
             />
         </label>
@@ -90,7 +90,7 @@ const FormComponent = () => {
             name="password"
             value={values.password}
             onChange={handleChange}
-            className="focus:outline-none pl-2 text-gray-800"
+            className="focus:outline-none pl-2 text-gray-800 w-full"
             spellCheck={false}
             />
         </label>

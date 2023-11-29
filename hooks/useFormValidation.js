@@ -20,7 +20,7 @@ const useFormValidation = (initialState, validationRules) => {
       // Iterate through each form field
       for (const key in validationRules) {
         console.log('dis is the key...', JSON.stringify(key));
-        if (Object.prototype.hasOwnProperty.call(validationRules, key)) {
+        // if (Object.prototype.hasOwnProperty.call(validationRules, key)) {
           // Get validation rules for the field
           console.log(Object.prototype, 'dis is object prototype')
           console.log(Object.prototype.hasOwnProperty.call(validationRules, key))
@@ -44,7 +44,7 @@ const useFormValidation = (initialState, validationRules) => {
               break; // Break on the first validation failure for this field
             }
           }
-        }
+        // }
       }
       if(Object.keys(touched).length == 3 && Object.keys(errors).length == 0 && !formIsValid) formIsValid = true;
       // Update errors and overall form validity
