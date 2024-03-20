@@ -27,7 +27,7 @@ const InteractiveLottie = () => {
         lottieObj,
         mode: "scroll",
         actions: [{
-            visibility: [0.1, 0.9],
+            visibility: [0.1, .8],
             type: "seek",
             frames: [0, 150]
         }]

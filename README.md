@@ -1,14 +1,13 @@
 This is a NextJS featured starter template containing the Following features and more:
 ## Features
 
-- Tailwind CSS
-- Google analytics
-- Page loader animation
-- Dynamic Head component | SEO
-- Responsive Navbar
-- Footer
-- Toast Notifications
-
+- Pagination
+- Searching
+- Skeleton
+- Tabs
+- Formvalidation hook
+- Debounce
+- Lottie
 
 ## Getting Started
 

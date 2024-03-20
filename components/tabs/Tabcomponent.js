@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './index.module.css'; // Import styles from the CSS module
 
 const TabComponent = ({ tabData }) => {
   const [activeTab, setActiveTab] = useState(tabData[0].id);
@@ -10,21 +9,19 @@ const TabComponent = ({ tabData }) => {
 
   return (
     <div>
-      <div className={styles.tabs}>
+      <div className="flex gap-4 mb-2 border-b-2 border-black border-r-1 bg-gray-200 rounded-lg p-2 no-scrollbar">
         {tabData.map(tab => (
           <div
             key={tab.id}
-            className={`${styles.tab} ${activeTab === tab.id ? styles.active : ''}`}
+            className={`px-7 py-3 bg-gray-300 cursor-pointer transition duration-300 ease-in-out rounded-md ${activeTab === tab.id ? 'bg-zinc-900 text-white' : ''}`}
             onClick={() => handleTabClick(tab.id)}
           >
             {tab.title}
           </div>
         ))}
       </div>
-      <div className={styles['tab-content']}>
-        <div className={`${styles['tab-pane']} ${styles.active}`}>
-          {tabData.find(tab => tab.id === activeTab)?.content}
-        </div>
+      <div className="p-4  bg-white">
+        {tabData.find(tab => tab.id === activeTab)?.content}
       </div>
     </div>
   );
